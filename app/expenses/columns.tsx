@@ -1,5 +1,4 @@
 "use client"
-import { timeAgo } from "@/lib/utils"
 import { ColumnDef } from "@tanstack/react-table"
 import { MoreHorizontal, ArrowUpDown } from "lucide-react"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -74,8 +73,6 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "paymentDate",
     header: "Payment Date",
       cell: ({ row }) => {
-        const startTime = Date.now()
-        const duration = Date.now() - startTime
         const formattedDate = new Date(row.getValue("paymentDate"))
         return (
           <div className="capitalize">{formattedDate.toDateString()}</div>
