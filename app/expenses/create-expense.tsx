@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Plus } from "lucide-react"
 import {
   Sheet,
   SheetClose,
@@ -18,7 +17,7 @@ export default function CreateExpense() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline" className=" flex items-center gap-2">New Expense <Plus /></Button>
+                <Button variant="outline">New Expense</Button>
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
