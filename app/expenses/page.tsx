@@ -10,6 +10,7 @@ async function getData(): Promise<Payment[]> {
 
 export default async function DemoPage() {
   const data = await getData()
+  console.log(data)
 
   return (
     <div className="container mx-auto py-10">

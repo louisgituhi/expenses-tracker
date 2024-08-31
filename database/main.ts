@@ -3,9 +3,9 @@ import { expensesTable } from "./drizzle/schema";
 
 async function dataCreator() {
     await db.insert(expensesTable).values({
-        category: "Airtime",
-        details: "Safaricom airtime",
-        amount: 80
+        category: "Shopping",
+        details: "Bought cups, plates and containers",
+        amount: 1821
     })
 }
 
