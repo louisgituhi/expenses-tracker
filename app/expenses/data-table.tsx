@@ -1,7 +1,5 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import CreateExpense from "./create-expense"
-import { ExpenseForm } from "./form-component"
 import { ChevronDown } from "lucide-react"
 
 import {
@@ -73,7 +71,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="w-full">
-      <CreateExpense />
+      {/* <CreateExpense /> */}
       <div className="flex items-center py-4">
         <Input
            placeholder="Filter by category..."
