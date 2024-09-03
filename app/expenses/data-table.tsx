@@ -71,7 +71,6 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="w-full">
-      {/* <CreateExpense /> */}
       <div className="flex items-center py-4">
         <Input
            placeholder="Filter by category..."
