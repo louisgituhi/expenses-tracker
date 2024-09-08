@@ -5,7 +5,7 @@ import { expensesTable } from "@/database/drizzle/schema"
 
 
 export const dynamic = "force-dynamic";
-export const revalidate = 6;
+export const revalidate = 60;
 
 async function getData(): Promise<Payment[]> {
   const data = await db.select().from(expensesTable)
