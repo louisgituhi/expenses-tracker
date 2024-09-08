@@ -2,17 +2,12 @@ import { Payment, columns } from "./columns"
 import { DataTable } from "./data-table"
 import { db } from "@/database/drizzle/db"
 import { expensesTable } from "@/database/drizzle/schema"
+import { revalidatePath } from "next/cache"
 
-
-// const getExpenses: = unstable_cache(
-//   async () => {
-//     return await db.select().from(expensesTable)
-//   },
-//   { revalidate: 3600 }
-// )
 
 async function getData(): Promise<Payment[]> {
   const data = await db.select().from(expensesTable)
+  revalidatePath("/expenses")
 
   return data
 }
@@ -25,4 +20,4 @@ export default async function DemoPage() {
       <DataTable columns={columns} data={data} />
     </div>
   )
-}
+};
